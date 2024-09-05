@@ -51,6 +51,7 @@ categorize_age(27)
 
 
 #Create and render Quarto
+#see .qmd
 
 
 #here package
