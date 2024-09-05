@@ -2,26 +2,25 @@
 title: "EPI590r Final Project"
 author: "Cameron Yeo"
 format: html
-editor: visual
 ---
 
-## Quarto
+## Olympics
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+This table below presents descriptive statistics sourced from the olympics dataset.
 
 ```{r}
-1 + 1
+tbl_summary(
+	olympics,
+	by = sex,
+	include = c(sex, age, season, medal))
 ```
 
-You can add options to executable code like this
+This table below presents the regression sourced from the olympics dataset.
 
 ```{r}
-#| echo: false
-2 * 2
+tbl_uvregression(
+	olympics,
+	y = age,
+	include = c(sex, height, weight),
+	method = lm)
 ```
-
-The `echo: false` option disables the printing of code (only output is displayed).
