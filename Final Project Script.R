@@ -15,6 +15,18 @@ tbl_summary(
 
 #Univariate regression
 
+tbl_uvregression(
+	olympics,
+	y = age,
+	include = c(sex, height, weight),
+	method = lm)
+
+
+
+#Creating a figure
+
+```{r fig-hist, fig.cap="Age Spread"}
+hist(olympics$age)
 
 
 
