@@ -29,4 +29,25 @@ tbl_uvregression(
 hist(olympics$age)
 
 
+#Writing and using a function
 
+categorize_age <- function(age) {
+	if (is.na(age)) {
+		return(NA)
+	} else if (age < 20) {
+		return("Teen")
+	} else if (age >= 20 & age < 30) {
+		return("Young Adult")
+	} else if (age >= 30 & age < 40) {
+		return("Adult")
+	} else {
+		return("Senior")
+	}
+}
+
+#Test function
+
+categorize_age(27)
+
+
+#Create and render Quarto
